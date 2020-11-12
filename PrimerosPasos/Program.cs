@@ -59,7 +59,11 @@ namespace PrimerosPasos
             Console.WriteLine("Liquido a recibir para Juan {0}", calcularSueldo(300,200));
             Console.WriteLine("Liquido a recibir para Carlos {0}", calcularSueldo(2000, 1000));
             Console.WriteLine("Liquido a recibir para Lesli {0}", calcularSueldo(1340, 199));
-        
+
+            figurata();
+
+            Console.WriteLine("El cuadrado de este numero es: {0}", funcioncuadrado(6));
+
             Console.ReadKey();
             //end to main
         }
@@ -77,11 +81,29 @@ namespace PrimerosPasos
             //la funcion devuelve un tipo de dato
         static int calcularSueldo(int ingreso, int egreso)
         {
-
-
-
             return ingreso-egreso;
         }
+        //Crear la funcion que imprima la siguiente figura
+        /*  
+              *
+             ***
+            ***** 
+           *******     
+        */
+        static void figurata()
+        {
+            Console.WriteLine("    *    ");
+            Console.WriteLine("   ***   ");
+            Console.WriteLine("  *****  ");
+            Console.WriteLine(" ******* ");
+        }
 
+         
+        //Crear la funcion que recibe un parametro entero y devuelve el cuadrado de este entero
+        static int funcioncuadrado(int K)
+        {
+            int Sacarcuadrado = K * K;
+            return Sacarcuadrado;
+        }
     }
 }
