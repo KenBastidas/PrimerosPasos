@@ -46,9 +46,42 @@ namespace PrimerosPasos
             sw = (a+50) > b;
             Console.WriteLine("El valor del booleano sw: {0}", sw);
 
+            //Pilares fundamnetales de la programacion estructurada
+            //Ejecution de sentencias secuenciales
+            //Uso de estructures repetitiveas
+            //Uso de estructures selectivas
+            saludos(nombre);
+            saludos("jose alcivar");
+            saludos("maria castro");
 
-
+            Console.WriteLine();
+            Console.WriteLine("Llamada a funcion que devuleve valor");
+            Console.WriteLine("Liquido a recibir para Juan {0}", calcularSueldo(300,200));
+            Console.WriteLine("Liquido a recibir para Carlos {0}", calcularSueldo(2000, 1000));
+            Console.WriteLine("Liquido a recibir para Lesli {0}", calcularSueldo(1340, 199));
+        
             Console.ReadKey();
+            //end to main
         }
+        //Funciones: subpocesos - subprogramas - subrutinas
+        //dividir el code en modulos
+        //Reutilizar el codigo
+        //tipo: devuelven valores- no devuelven valores
+        static void saludos(string nombre) //parametro - argumento
+        {
+            Console.WriteLine("Funcion que no devuelve valores...");
+            Console.WriteLine("Hola {0} ", nombre);
+        }
+
+            //funcion que deuleve valor
+            //la funcion devuelve un tipo de dato
+        static int calcularSueldo(int ingreso, int egreso)
+        {
+
+
+
+            return ingreso-egreso;
+        }
+
     }
 }
