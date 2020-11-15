@@ -16,7 +16,7 @@ namespace PrimerosPasos
             b = 20;
             suma = a + b;
             Console.WriteLine("La suma de {0} + {1} = {2}", a, b, suma);
-            
+
             //type of date: number in coma flotante
             float sueldo, egreso, total;
             Console.WriteLine("Ingrese el sueldo del trabajador: ");
@@ -43,7 +43,7 @@ namespace PrimerosPasos
             Console.WriteLine("Hola " + nombre + "welcome al cursoof programacion!!!");
             //type of date:Booleano(type logic:true/false)
             bool sw;
-            sw = (a+50) > b;
+            sw = (a + 50) > b;
             Console.WriteLine("El valor del booleano sw: {0}", sw);
 
             //Pilares fundamnetales de la programacion estructurada
@@ -56,13 +56,17 @@ namespace PrimerosPasos
 
             Console.WriteLine();
             Console.WriteLine("Llamada a funcion que devuleve valor");
-            Console.WriteLine("Liquido a recibir para Juan {0}", calcularSueldo(300,200));
+            Console.WriteLine("Liquido a recibir para Juan {0}", calcularSueldo(300, 200));
             Console.WriteLine("Liquido a recibir para Carlos {0}", calcularSueldo(2000, 1000));
             Console.WriteLine("Liquido a recibir para Lesli {0}", calcularSueldo(1340, 199));
 
             figurata();
 
             Console.WriteLine("El cuadrado de este numero es: {0}", funcioncuadrado(6));
+
+            mayor(12, 20, 30);
+
+            Console.WriteLine("El resultado es {0}",EJERTWO(suma));
 
             Console.ReadKey();
             //end to main
@@ -77,11 +81,11 @@ namespace PrimerosPasos
             Console.WriteLine("Hola {0} ", nombre);
         }
 
-            //funcion que deuleve valor
-            //la funcion devuelve un tipo de dato
+        //funcion que deuleve valor
+        //la funcion devuelve un tipo de dato
         static int calcularSueldo(int ingreso, int egreso)
         {
-            return ingreso-egreso;
+            return ingreso - egreso;
         }
         //Crear la funcion que imprima la siguiente figura
         /*  
@@ -98,12 +102,46 @@ namespace PrimerosPasos
             Console.WriteLine(" ******* ");
         }
 
-         
+
         //Crear la funcion que recibe un parametro entero y devuelve el cuadrado de este entero
         static int funcioncuadrado(int K)
         {
             int Sacarcuadrado = K * K;
             return Sacarcuadrado;
+        }
+
+        //Prepare un ejercicio,que dentro de una funcion use una condicional
+        //la funcion puede o no devolver valores
+       
+        static int mayor(int a, int b, int c)
+        {
+            int mayor;
+            if (a < b) if (a > c)
+                    mayor = a;
+                else
+                    mayor = c;
+            else
+            if (b > c)
+                mayor = b;
+            else
+                mayor = c;
+            Console.WriteLine("El numero mayor es {0} ", mayor);
+
+            return mayor;
+        }
+
+        //Prepara un ejericico, que dentro de una funcion utilice 
+        //un bucle (for o while)
+        //la funcion puede o no devolver valores
+        static int EJERTWO(int cuadrado)
+        {
+            int suma=0;
+            for (int i = 2; i <= 50; i++)
+            {
+                cuadrado = i * i;
+                suma = suma + cuadrado;
+            }
+            return suma;
         }
     }
 }
